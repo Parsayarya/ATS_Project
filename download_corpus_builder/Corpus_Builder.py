@@ -101,6 +101,7 @@ wp_excel_path = r'D:/python/ATS/DownloadCorpusBuilder/files/csvInputs/listofpape
 
 # Call the function and get the final dataframe
 df = create_dataframe(text_folder_IP, text_folder_WP, ip_excel_path, wp_excel_path)
+df.to_csv(r'D:/python/ATS/DownloadCorpusBuilder/files/csvInputs/Corpus.csv')
 # print(df.head(10), '\n\n\n', df.describe(), '\n\n\n', df.info(),'\n\n\n\n\n\n',df[df['Text'] == '0'])
 
 # text_folder_IP = r'D:/python/ATS/DownloadCorpusBuilder/files/docxOutputs/IP/'
