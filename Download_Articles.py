@@ -7,6 +7,10 @@ dirname = os.path.dirname(__file__)
 CSV_INPUT_PATH = os.path.join(dirname, 'files/csvInputs/')
 DOCX_OUTPUT_PATH = os.path.join(dirname, 'files/docxOutputs/')
 
+# https://documents.ats.aq/SATCM12/wp/SATCM12_wp001_e.pdf
+# https://documents.ats.aq/SATCM1/wp/SATCM1_wp001_e.pdf
+# https://documents.ats.aq/ATCM45/wp/ATCM45_wp001_e.docx
+# https://documents.ats.aq/ATCM31/wp/ATCM31_wp001_e.doc
 
 def xlsx_to_csv(xlsx_file, csv_file):
     """Convert an XLSX file to a CSV file.
@@ -97,19 +101,21 @@ def csv2links(file: str) -> list:
         else:
             s_final_2 = no.split(' ')[0].lower()
 
-        links.append(f'https://documents.ats.aq/{s_final_1}/{article_type}/{s_final_1}_{s_final_2}_e.docx')
+        # links.append(f'https://documents.ats.aq/{s_final_1}/{article_type}/{s_final_1}_{s_final_2}_e.docx')
+        # links.append(f'https://documents.ats.aq/{s_final_1}/{article_type}/{s_final_1}_{s_final_2}_e.doc')
+        links.append(f'https://documents.ats.aq/{s_final_1}/{article_type}/{s_final_1}_{s_final_2}_e.pdf')
 
     return links
 
 
-xlsx_to_csv(os.path.join(CSV_INPUT_PATH, 'listofpapersI.xlsx'), os.path.join(CSV_INPUT_PATH, 'listofpapersI.csv'))
-xlsx_to_csv(os.path.join(CSV_INPUT_PATH, 'listofpapersW.xlsx'), os.path.join(CSV_INPUT_PATH, 'listofpapersW.csv'))
+xlsx_to_csv(os.path.join(CSV_INPUT_PATH, 'listofpapersSIP.xlsx'), os.path.join(CSV_INPUT_PATH, 'listofpapersSIP.csv'))
+xlsx_to_csv(os.path.join(CSV_INPUT_PATH, 'listofpapersSWP.xlsx'), os.path.join(CSV_INPUT_PATH, 'listofpapersSWP.csv'))
 # Convert CSV data into lists of download links
-IPArticles = csv2links(os.path.join(CSV_INPUT_PATH, 'listofpapersI.csv'))
-WPArticles = csv2links(os.path.join(CSV_INPUT_PATH, 'listofpapersW.csv'))
+IPArticles = csv2links(os.path.join(CSV_INPUT_PATH, 'listofpapersSIP.csv'))
+WPArticles = csv2links(os.path.join(CSV_INPUT_PATH, 'listofpapersSWP.csv'))
 
 # Download articles and save them to specified sub-folders
 for A in IPArticles:
-    download_article_file(A, 'IP/')
+    download_article_file(A, 'SIPN/')
 for A in WPArticles:
-    download_article_file(A, 'WP/')
+    download_article_file(A, 'SWPN/')
