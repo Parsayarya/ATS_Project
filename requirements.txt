@@ -1,0 +1,12 @@
+PIL
+docx
+fitz
+pandas
+pytesseract
+requests
+src.convert
+src.corpus_builder
+src.delete_extras
+src.download_articles
+src.download_science_papers
+win32com
