@@ -2,11 +2,21 @@
 This project is a notebook containing a Topic Modelling exercise. It is designed to extract and understand the topics from a given dataset to derive insights and patterns.
 
 Table of Contents
-Installation
-Usage
-Code Explanation
-License
-Installation
+
+
+  1-  Installation
+
+  
+  2-  Usage
+
+  
+  3-  Code Explanation  
+
+  
+  4-  License
+
+  
+## Installation
 The project is contained in a Jupyter Notebook file named FinalTopicModelling.ipynb. To run this file, you will need to have Jupyter Notebook installed on your machine.
 
 Install the latest version of Jupyter Notebook (Anaconda distribution is recommended for ease of use).
