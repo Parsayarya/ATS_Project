@@ -39,5 +39,5 @@ Unlike LDA, NMF does not assume a probabilistic generative process but seeks to 
 The notebook guides you through the process of preparing the data, building the models, and visualizing the topics. Each section of the code is well-commented, providing insights into the steps involved in the analysis.
 
 ## License
-This project is open for researchers to use and modify. If you use or reference this project in your research, please acknowledge the original author(s).
+This project is open for researchers to use and modify. If you use or reference this project in your research, please acknowledge the original author.
 
