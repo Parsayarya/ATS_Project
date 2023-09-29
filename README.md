@@ -1,6 +1,8 @@
-# Research Project Scripts
+# ATS_Project Scripts
 
 This repository contains a collection of scripts used for various tasks in a research project. The tasks include downloading articles, converting PDF files to DOCX format using OCR, building a text corpus from DOCX files, deleting extra files, and downloading science papers.
+
+It also contains the models used and the corresponding results in the modelling folder.
 
 ## Setup
 
